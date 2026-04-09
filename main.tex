@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla TFM - Máster Universitario en Inteligencia Artificial
+% Universidad Alfonso X el Sabio (UAX) - Business Tech
+%
+% 2025-2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PAQUETES Y CONFIGURACIÓN DEL DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{Thesis}
+
+% Localización en español
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\appendixname}{Anexo}
+
+\graphicspath{{Pictures/}}
+
+% Bibliografía estilo APA (autor-año)
+\usepackage[round, authoryear, comma]{natbib}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{notoccite}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{hhline}
+\usepackage{textcomp}
+\usepackage{breqn}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\hypersetup{urlcolor=blue, colorlinks=true}
+\title{\ttitle}
+
+\begin{document}
+
+\pagenumbering{arabic} % Numeración árabe desde el inicio
+
+\setstretch{1.3}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header: título del capítulo a la izquierda, logo UAX a la derecha
+\lhead{\slshape \leftmark}
+\rhead{\includegraphics[height=0.6cm]{Pictures/UAX_idW9XjYNGl_0.png}}
+
+% Footer: nombre a la izquierda, número de página a la derecha
+\lfoot{\small Nombre del Alumno}
+\rfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Páginas de apertura de capítulo (estilo plain): logo en header, footer completo
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \rhead{\includegraphics[height=0.6cm]{Pictures/UAX_idW9XjYNGl_0.png}}
+  \lfoot{\small Nombre del Alumno}
+  \rfoot{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Metadatos PDF
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	PORTADA
+%----------------------------------------------------------------------------------------
+
+\input{cover_asu}
+
+%----------------------------------------------------------------------------------------
+%	RESUMEN Y ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\input{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ÍNDICE / LISTAS
+%----------------------------------------------------------------------------------------
+
+\clearpage
+\lhead{\emph{Índice}}
+\tableofcontents
+
+\clearpage
+\lhead{\emph{Lista de Figuras}}
+\listoffigures
+
+\clearpage
+\lhead{\emph{Lista de Tablas}}
+\listoftables
+
+%----------------------------------------------------------------------------------------
+%	CAPÍTULOS
+%----------------------------------------------------------------------------------------
+
+\makeatletter\@mainmattertrue\makeatother % Activa la numeración de capítulos
+
+\pagestyle{fancy}
+
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter2}
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4}
+\input{Chapters/Chapter5}
+\input{Chapters/Chapter6}
+
+\addtocontents{toc}{\vspace{2em}}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFÍA
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\label{Bibliografia}
+\renewcommand{\bibname}{Bibliografía}
+\phantomsection
+\addtotoc{Bibliografía}
+\lhead{\emph{Bibliografía}}
+
+\bibliographystyle{apalike} % Estilo APA
+\bibliography{Bibliography}
+
+%----------------------------------------------------------------------------------------
+%	ANEXOS
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}}
+
+\appendix
+\renewcommand{\chaptername}{Anexo}
+
+\input{Appendices/AppendixA}
+
+\end{document}

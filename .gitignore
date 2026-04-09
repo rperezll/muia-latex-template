@@ -1,0 +1,27 @@
+# Artefactos de compilación LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.synctex(busy)
+*.pdf
+
+# Archivos temporales
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Directorio de salida (si se usa)
+out/
+build/
+
+# Claude Code (configuración local)
+.claude/

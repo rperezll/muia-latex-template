@@ -1,0 +1,18 @@
+{
+  "name": "Entorno LaTeX",
+  "image": "texlive/texlive:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-spanish"
+      ],
+      "settings": {
+        "latex-workshop.latex.autoBuild.run": "onFileChange",
+        "latex-workshop.latex.recipe.default": "latexmk",
+        "latex-workshop.view.pdf.viewer": "tab"
+      }
+    }
+  }
+}
