@@ -25,3 +25,6 @@ build/
 
 # Claude Code (configuración local)
 .claude/
+
+# Demo
+!Demo/main.pdf

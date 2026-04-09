@@ -2,6 +2,10 @@
 
 Plantilla LaTeX para el Trabajo de Fin de Máster del **Máster Universitario en Inteligencia Artificial** de la Universidad Alfonso X el Sabio (Business Tech). Adaptada a los requisitos oficiales del TFM (UAX/25-26).
 
+## Demo
+
+En [Demo/main.pdf](Demo/main.pdf) hay una prueba del resultado de la plantilla compilada.
+
 ## Ejecución
 
 ### Con Docker (recomendado)
