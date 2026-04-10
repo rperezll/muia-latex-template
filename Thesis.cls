@@ -32,7 +32,7 @@
 %----------------------------------------------------------------------------------------
 %	MÁRGENES
 %----------------------------------------------------------------------------------------
-\setmarginsrb  { 1.5in}  % margen izquierdo
+\setmarginsrb  { 1.0in}  % margen izquierdo
                         { 0.6in}  % margen superior
                         { 1.0in}  % margen derecho
                         { 0.8in}  % margen inferior
